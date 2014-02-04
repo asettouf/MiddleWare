@@ -5,7 +5,7 @@
   <groupId>com.jac.web</groupId>
   <artifactId>middleware</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>middleware</name>
   <url>http://maven.apache.org</url>
