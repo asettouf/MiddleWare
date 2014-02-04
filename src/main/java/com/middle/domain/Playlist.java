@@ -32,7 +32,7 @@ public class Playlist {
 	}
 
 	@OneToMany
-	@JoinColumn(name="trackId")
+	
 	public ArrayList<Track> getSongs() {
 		return songs;
 	}

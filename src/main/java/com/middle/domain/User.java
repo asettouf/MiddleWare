@@ -51,7 +51,7 @@ public class User {
 	}
 
 	@OneToMany
-	@JoinColumn(name="playlistId")
+	
 	public ArrayList<Playlist> getPlaylist() {
 		return playlist;
 	}

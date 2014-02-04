@@ -5,13 +5,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Rel")
 public class Release {
 	
 	
 	private int releaseId;
 	private int releaseNumber;
+
 
 	public Release() {
 		// TODO Auto-generated constructor stub
@@ -27,7 +30,7 @@ public class Release {
 		this.releaseId = releaseId;
 	}
 	
-	@Column(name = "release")
+	@Column(name = "relNum")
 	public int getReleaseNumber() {
 		return releaseNumber;
 	}

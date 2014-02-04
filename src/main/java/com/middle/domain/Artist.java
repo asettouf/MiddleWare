@@ -44,7 +44,7 @@ public class Artist {
 	}
 	
 	@OneToMany
-	@JoinColumn(name="trackId")
+	
 	public ArrayList<Track> getTracks() {
 		return tracks;
 	}
