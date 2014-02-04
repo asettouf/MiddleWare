@@ -3,11 +3,11 @@ package com.middle.domain;
 import javax.persistence.Entity;
 
 @Entity
-public class release {
+public class Release {
 	
 	private int id;
 
-	public release() {
+	public Release() {
 		// TODO Auto-generated constructor stub
 	}
 	
