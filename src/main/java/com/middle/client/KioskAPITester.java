@@ -1,4 +1,4 @@
-package com.middle.dao;
+package com.middle.client;
 
 import java.util.Collection;
 
