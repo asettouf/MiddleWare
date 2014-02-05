@@ -21,6 +21,14 @@ public class Playlist {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	public Playlist(ArrayList<Track> songs, String name) {
+		super();
+		this.songs = songs;
+		this.name = name;
+	}
+
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	public int getPlaylistId() {

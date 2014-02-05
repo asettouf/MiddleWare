@@ -7,7 +7,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 
-import com.middle.domain.Label;
+import com.middle.domain.Release;
+import com.middle.domain.Style;
+import com.middle.domain.Track;
 
 public class Main {
 	
@@ -31,10 +33,12 @@ public class Main {
 		EntityManagerFactory emf=Persistence.createEntityManagerFactory("toto");
 		em=emf.createEntityManager();
 		em.getTransaction().begin();
-		Label l=new Label();
-		l.setLabel("test");
-		
-		em.persist(l);
+		Release r=new Release(15);
+		Style s=new Style("yolo");
+		Track t=new Track(r, s, "yolo 4 life");
+		em.persist(r);
+		em.persist(s);
+		em.persist(t);
 		em.getTransaction().commit();
 		//System.out.println("yeah");
 

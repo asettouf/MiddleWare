@@ -20,6 +20,13 @@ public class Release {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	public Release(int releaseNumber) {
+		super();
+		this.releaseNumber = releaseNumber;
+	}
+
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	public int getReleaseId() {

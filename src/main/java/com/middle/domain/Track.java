@@ -20,6 +20,15 @@ public class Track {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	public Track(Release release, Style style, String name) {
+		super();
+		this.release = release;
+		this.style = style;
+		this.name = name;
+	}
+
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	public int getTrackId() {

@@ -16,6 +16,15 @@ public class Style {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public Style(String style) {
+		super();
+		this.style = style;
+	}
+
+
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	public int getStyleId() {
