@@ -7,6 +7,7 @@
       <jta-data-source>jdbc/middleware</jta-data-source>
       
       
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
  	<class>com.middle.domain.Artist</class>
     <class>com.middle.domain.Label</class>
     <class>com.middle.domain.Playlist</class>

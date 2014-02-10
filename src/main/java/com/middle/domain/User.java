@@ -1,5 +1,6 @@
 package com.middle.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.persistence.Column;
@@ -7,12 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-public class User {
+public class User implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int userId;
 	private String password;
 	private String email;
@@ -22,6 +26,14 @@ public class User {
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
+
+	
+	public User(String password, String email) {
+		super();
+		this.password = password;
+		this.email = email;
+	}
+
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -6,14 +6,14 @@ import java.util.Collection;
  * Allow to test the Kiosk API
  * 
  * @param <Artist>
- * @param <release>
+ * @param <Release>
  * @param <User>
  * @param <Style>
  * @param <Playlist>
  * @param <Label>
  * @param <Track>
  */
-public interface KioskAPITester<Artist, release, User, Style, Playlist, Label, Track>{
+public interface KioskAPITester<Artist, Release, User, Style, Playlist, Label, Track>{
 
 	/* Sessions methods */
 
@@ -32,7 +32,7 @@ public interface KioskAPITester<Artist, release, User, Style, Playlist, Label, T
 	 * 
 	 * @return a collection with the releases
 	 */
-	public Collection<release> getLatestReleases();
+	public Collection<Release> getLatestReleases();
 
 	/**
 	 * Return the specified release
@@ -40,7 +40,7 @@ public interface KioskAPITester<Artist, release, User, Style, Playlist, Label, T
 	 * @param id_release
 	 * @return the release
 	 */
-	public release getRelease(int id_release);
+	public Release getRelease(int id_release);
 
 	/**
 	 * Return similar releases of the one specified
@@ -48,7 +48,7 @@ public interface KioskAPITester<Artist, release, User, Style, Playlist, Label, T
 	 * @param id_release
 	 * @return a collection with the releases
 	 */
-	public Collection<release> getSimilarReleases(int id_release);
+	public Collection<Release> getSimilarReleases(int id_release);
 
 	/**
 	 * Add the release to the current user favorites
@@ -87,7 +87,7 @@ public interface KioskAPITester<Artist, release, User, Style, Playlist, Label, T
 	 * @param id_artist
 	 * @return a collection with the releases
 	 */
-	public Collection<release> getReleasesFromArtist(int id_artist);
+	public Collection<Release> getReleasesFromArtist(int id_artist);
 
 	/* Labels methods */
 
@@ -253,6 +253,6 @@ public interface KioskAPITester<Artist, release, User, Style, Playlist, Label, T
 	 * 
 	 * @return a collection with the releases
 	 */
-	public Collection<release> getFavorities();
+	public Collection<Release> getFavorities();
 
 }
