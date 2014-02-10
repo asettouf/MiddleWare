@@ -36,7 +36,7 @@ public class User implements Serializable{
 
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getUserId() {
 		return userId;
 	}
