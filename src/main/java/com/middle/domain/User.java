@@ -2,12 +2,15 @@ package com.middle.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -17,10 +20,15 @@ public class User implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userId;
+	@Column(name = "password")
 	private String password;
+	@Column(name = "email")
 	private String email;
-	private ArrayList<Playlist> playlist;
+	@OneToMany(targetEntity=Playlist.class, cascade=CascadeType.ALL)
+	private Collection<Playlist> playlist;
 	
 
 	public User() {
@@ -32,11 +40,11 @@ public class User implements Serializable{
 		super();
 		this.password = password;
 		this.email = email;
+		this.playlist=new ArrayList<Playlist>();
 	}
 
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	public int getUserId() {
 		return userId;
 	}
@@ -44,7 +52,7 @@ public class User implements Serializable{
 	public void setUserId(int id) {
 		this.userId = id;
 	}
-	 @Column(name = "password")
+
 	public String getPassword() {
 		return password;
 	}
@@ -53,7 +61,7 @@ public class User implements Serializable{
 		this.password = password;
 	}
 
-	@Column(name = "email")
+	
 	public String getEmail() {
 		return email;
 	}
@@ -62,13 +70,13 @@ public class User implements Serializable{
 		this.email = email;
 	}
 
-	@OneToMany
+
 	
-	public ArrayList<Playlist> getPlaylist() {
+	public Collection<Playlist> getPlaylist() {
 		return playlist;
 	}
 
-	public void setPlaylist(ArrayList<Playlist> playlist) {
+	public void setPlaylist(Collection<Playlist> playlist) {
 		this.playlist = playlist;
 	}
 

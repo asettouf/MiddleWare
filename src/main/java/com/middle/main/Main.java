@@ -1,6 +1,7 @@
 package com.middle.main;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import org.apache.openjpa.persistence.Persistent;
@@ -46,8 +47,7 @@ public class Main {
 		if (toto==null){
 			System.out.println("perhaps");
 		}*/
-		UserInterfaceDao ud=new UserDao();
-		ud.createUser(new User("hh","tt"));
+	
 
 	}
 
