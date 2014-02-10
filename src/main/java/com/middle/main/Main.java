@@ -1,19 +1,19 @@
 package com.middle.main;
 
-import java.rmi.RemoteException;
-
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.apache.openjpa.persistence.Persistent;
+
 import com.middle.dao.UserDao;
+import com.middle.dao.UserInterfaceDao;
 import com.middle.domain.Style;
 import com.middle.domain.User;
 
 public class Main {
 	
-	//@PersistenceContext
-	//private static EntityManager em;
+	@Persistent
+	private static  EntityManager em;
 
 	public Main() {
 		// TODO Auto-generated constructor stub
@@ -46,8 +46,8 @@ public class Main {
 		if (toto==null){
 			System.out.println("perhaps");
 		}*/
-
-		
+		UserInterfaceDao ud=new UserDao();
+		ud.createUser(new User("hh","tt"));
 
 	}
 

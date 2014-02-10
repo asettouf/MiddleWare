@@ -18,7 +18,7 @@ public class UserDao implements UserInterfaceDao, Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	@PersistenceContext
+	@PersistenceContext(name="toto")
 	private EntityManager em;
 	
 
@@ -27,7 +27,7 @@ public class UserDao implements UserInterfaceDao, Serializable {
 	}
 
 	@Override
-	public void createUser(User u) throws RemoteException {
+	public void createUser(User u)  {
 		
 		em.persist(u);
 		
@@ -36,8 +36,6 @@ public class UserDao implements UserInterfaceDao, Serializable {
 		
 	}
 	
-	public String fuck(){
-		return "fuck";
-	}
+
 
 }

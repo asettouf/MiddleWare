@@ -15,12 +15,8 @@
     <class>com.middle.domain.Track</class>
     <class>com.middle.domain.User</class>  
     <properties>       
-      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema"/>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
 
-      <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost/middleware"/>
-      <property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
-      <property name="openjpa.ConnectionUserName" value="root"/>
-      <property name="openjpa.ConnectionPassword" value="blackboner69"/>
       <property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO"/>
     </properties>
   </persistence-unit>

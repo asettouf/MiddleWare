@@ -19,11 +19,6 @@ public class UserController {
 	}
 
 	public void createUser(User u){
-		try {
-			udao.createUser(u);
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		udao.createUser(u);
 	}
 }

@@ -9,7 +9,6 @@ import com.middle.domain.User;
 @Remote
 public interface UserInterfaceDao {
 	
-	public void createUser(User u) throws RemoteException;
-	public String fuck();
+	public void createUser(User u);
 
 }
