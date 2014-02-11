@@ -10,5 +10,6 @@ import com.middle.domain.User;
 public interface UserInterfaceDao {
 	
 	public void createUser(User u);
+	public User findUser(long id);
 
 }

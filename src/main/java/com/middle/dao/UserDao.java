@@ -1,13 +1,11 @@
 package com.middle.dao;
 
 import java.io.Serializable;
-import java.rmi.RemoteException;
 
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import javax.ws.rs.PathParam;
 
 import com.middle.domain.User;
 
@@ -33,6 +31,16 @@ public class UserDao implements UserInterfaceDao, Serializable {
 		
 		
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User findUser(@PathParam("id") long id) {
+		// TODO Auto-generated method stub
+		User user=em.find(User.class,id);
+		if (user==null)
+			return null;
+		return user;
 		
 	}
 	
